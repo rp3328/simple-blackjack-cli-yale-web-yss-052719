@@ -68,18 +68,15 @@ end
 
 def runner
   # code runner here
-  num = 0
 
   welcome
-  initial_round
   x = initial_round
+
+  while x < 21
   hit?(x)
-  sum = hit?(x)
-  while sum < 21
-  hit?(sum)
-  sum = hit?(sum)
-  display_card_total(sum)
+  x = hit?(x)
+  display_card_total(x)
   end
-  end_game(sum)
+  end_game(x)
 
 end
